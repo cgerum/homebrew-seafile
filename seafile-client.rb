@@ -2,9 +2,9 @@ require "formula"
 
 class SeafileClient < Formula
   homepage "http://www.seafile.com/"
-  url "https://github.com/haiwen/seafile-client/archive/v4.0.1.tar.gz"
-  sha1 "2bbdb2cdb5bcb6bcbbbf1c2ed578cc68d4aaf739"
-  version "4.0.1"
+  url "https://github.com/haiwen/seafile-client/archive/v4.0.3.tar.gz"
+  sha1 "1091acf159e4f4e9feaba1bd8ab1a2ea8d9e20cc"
+  version "4.0.3"
 
   head "https://github.com/haiwen/seafile-client.git"
 
