@@ -25,7 +25,6 @@ class Ccnet30 < Formula
   depends_on 'glib'
   depends_on 'ossp-uuid'
   depends_on 'jansson'
-  depends_on 'libzdb'
   depends_on 'libevent'
   depends_on 'libsearpc30'
   depends_on 'sqlite' if build.with? 'brewed-sqlite'

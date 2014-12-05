@@ -29,7 +29,6 @@ class Ccnet31 < Formula
   depends_on "vala" => :build
   depends_on "glib"
   depends_on "jansson"
-  depends_on "libzdb"
   depends_on "libevent"
   depends_on "openssl"
   depends_on "sqlite" if build.with? "brewed-sqlite"
