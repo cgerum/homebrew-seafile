@@ -21,8 +21,6 @@ class Ccnet < Formula
     sha1 "e6c540344dfa4d4650cf3e370f2421d897319ab6"
   end
 
-  option "without-brewed-sqlite", "Build without Homebrew sqlite3"
-
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "pkg-config" => :build
@@ -32,7 +30,7 @@ class Ccnet < Formula
   depends_on "jansson"
   depends_on "libevent"
   depends_on "openssl"
-  depends_on "sqlite" if build.with? "brewed-sqlite"
+  depends_on "sqlite"
   depends_on "libsearpc"
 
   def install

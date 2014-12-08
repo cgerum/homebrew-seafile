@@ -11,7 +11,6 @@ class SeafileClient < Formula
 
   depends_on MinimumMacOSRequirement => :lion
 
-  option "without-brewed-sqlite", "Build without Homebrew sqlite3"
   option "with-xcode", "Build with XCODE_APP Flags"
 
   depends_on "cmake" => :build
@@ -19,8 +18,7 @@ class SeafileClient < Formula
   depends_on "jansson"
   depends_on "qt4"
   depends_on "openssl"
-  depends_on "sqlite" if build.with? "brewed-sqlite"
-
+  depends_on "sqlite"
   depends_on "libsearpc"
   depends_on "ccnet"
   depends_on "seafile"

@@ -29,8 +29,6 @@ class Seafile < Formula
 
   depends_on MinimumMacOSRequirement => :lion
 
-  option "without-brewed-sqlite", "Build without Homebrew sqlite3"
-
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "pkg-config" => :build
@@ -40,13 +38,8 @@ class Seafile < Formula
   depends_on "jansson"
   depends_on "libevent"
   depends_on "openssl"
-  depends_on "sqlite" if build.with? "brewed-sqlite"
-
-  if MacOS.version >= :mountain_lion
-    depends_on "curl" => "openssl"
-  else
-    depends_on "curl"
-  end
+  depends_on "sqlite"
+  depends_on "curl"
 
   depends_on "libsearpc"
   depends_on "ccnet"
