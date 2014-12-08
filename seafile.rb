@@ -29,7 +29,7 @@ class Seafile < Formula
 
   depends_on MinimumMacOSRequirement => :lion
 
-  option "with-brewed-sqlite", "Build with Homebrew sqlite3"
+  option "without-brewed-sqlite", "Build without Homebrew sqlite3"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build

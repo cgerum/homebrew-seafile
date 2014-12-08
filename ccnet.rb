@@ -21,7 +21,7 @@ class Ccnet < Formula
     sha1 "e6c540344dfa4d4650cf3e370f2421d897319ab6"
   end
 
-  option "with-brewed-sqlite", "Build with Homebrew sqlite3"
+  option "without-brewed-sqlite", "Build without Homebrew sqlite3"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
