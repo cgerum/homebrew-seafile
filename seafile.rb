@@ -2,8 +2,8 @@ require "formula"
 
 class Seafile < Formula
   homepage "http://www.seafile.com/"
-  url "https://github.com/haiwen/seafile/archive/v4.0.4.tar.gz"
-  sha1 "4164e351a0284804213b44f1d9bcf2106b918970"
+  url "https://github.com/haiwen/seafile/archive/v4.0.5.tar.gz"
+  sha1 "4e7899ce2ea012d912b7541563505b1468e27244"
 
   head "https://github.com/haiwen/seafile.git"
 
@@ -25,7 +25,7 @@ class Seafile < Formula
     sha1 "da429338d1726b95e26b70f7a9ce1bfa3a7392ae"
   end
 
-  depends_on MinimumMacOSRequirement => :lion
+  depends_on MinimumMacOSRequirement => :snow_leopard
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build

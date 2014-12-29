@@ -2,12 +2,12 @@ require "formula"
 
 class SeafileClient < Formula
   homepage "http://www.seafile.com/"
-  url "https://github.com/haiwen/seafile-client/archive/v4.0.4.tar.gz"
-  sha1 "1b2ac38957b8bd2af8145cf3ee606ceabecc120d"
+  url "https://github.com/haiwen/seafile-client/archive/v4.0.5.tar.gz"
+  sha1 "bb9e793e587a29a2883bf218247b6a1bde592468"
 
   head "https://github.com/haiwen/seafile-client.git"
 
-  depends_on MinimumMacOSRequirement => :lion
+  depends_on MinimumMacOSRequirement => :snow_leopard
 
   option "with-xcode", "Build with XCODE_APP Flags"
 
