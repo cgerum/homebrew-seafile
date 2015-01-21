@@ -9,7 +9,7 @@ class SeafileClient < Formula
 
   depends_on MinimumMacOSRequirement => :snow_leopard
 
-  option "with-xcode", "Build with XCODE_APP Flags"
+  option "with-app", "Build with app bundle"
 
   #[FIX] fix possible crash when starting program
   patch :p1 do
@@ -29,13 +29,21 @@ class SeafileClient < Formula
 
   def install
 
-    # todo use xcode generator to build a app bundle
     cmake_args = std_cmake_args
     if build.with? "xcode"
-      cmake_args << "-DCMAKE_CXX_FLAGS=\"-DXCODE_APP\""
+      cmake_args << "-G" << "Xcode"
+      system "cmake", ".", *cmake_args
+      system "xcodebuild", "-target", "ALL_BUILD", "-configuration", "Release"
+      prefix.install "Release/seafile-applet.app"
+      app = prefix/"seafile-applet.app/Contents"
+      mkdir_p app/"Resources"
+      (app/"Resources").install_symlink "#{Formula["ccnet"].opt_prefix}/bin/ccnet"
+      (app/"Resources").install_symlink "#{Formula["seafile"].opt_prefix}/bin/seaf-daemon"
+    else
+      system "cmake", ".", *cmake_args
+      system "make"
+      system "make", "install"
     end
-    system "cmake", ".", *cmake_args
-    system "make"
-    system "make", "install"
+
   end
 end
