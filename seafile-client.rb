@@ -4,17 +4,20 @@ class SeafileClient < Formula
   homepage "http://www.seafile.com/"
   url "https://github.com/haiwen/seafile-client/archive/v4.0.6.tar.gz"
   sha1 "507c7034ab402796e1015403cff796f2ac872820"
+  revision 1
 
   head "https://github.com/haiwen/seafile-client.git"
 
   depends_on MinimumMacOSRequirement => :snow_leopard
 
-  option "with-app", "Build with app bundle"
+  option "without-app", "Build without app bundle"
 
-  #[FIX] fix possible crash when starting program
-  patch :p1 do
-    url "https://github.com/Chilledheart/seafile-client/commit/8bd1224.diff"
-    sha1 "b54cafbadb7b3d738bfed33fdaf602982285be88"
+  stable do
+    #[FIX] fix possible crash when starting program
+    patch :p1 do
+      url "https://github.com/Chilledheart/seafile-client/commit/8bd1224.diff"
+      sha1 "b54cafbadb7b3d738bfed33fdaf602982285be88"
+    end
   end
 
   depends_on "cmake" => :build
