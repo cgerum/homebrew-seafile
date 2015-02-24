@@ -24,7 +24,7 @@ class SeafileClient < Formula
   def install
 
     cmake_args = std_cmake_args
-    if build.with? "xcode"
+    if build.with? "app"
       cmake_args << "-G" << "Xcode"
       system "cmake", ".", *cmake_args
       system "xcodebuild", "-target", "ALL_BUILD", "-configuration", "Release"
