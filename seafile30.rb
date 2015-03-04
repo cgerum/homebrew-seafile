@@ -48,6 +48,8 @@ class Seafile30 < Formula
   depends_on 'libsearpc30'
   depends_on 'ccnet30'
 
+  conflicts_with "seafile"
+
   def install
 
     args = %W[

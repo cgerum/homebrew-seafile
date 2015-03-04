@@ -29,6 +29,8 @@ class Ccnet30 < Formula
   depends_on 'libsearpc30'
   depends_on 'sqlite' if build.with? 'brewed-sqlite'
 
+  conflicts_with "ccnet"
+
   #Compatiblity issue with Apple's Secure Transport
   depends_on 'openssl' if build.with? 'brewed-openssl'
 

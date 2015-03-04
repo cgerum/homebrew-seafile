@@ -29,6 +29,8 @@ class SeafileClient30 < Formula
   depends_on 'ccnet30'
   depends_on 'seafile30'
 
+  conflicts_with "seafile-client"
+
   #Compatiblity issue with Apple's Secure Transport
   depends_on 'openssl' if build.with? 'brewed-openssl'
 

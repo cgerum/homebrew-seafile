@@ -31,6 +31,8 @@ class Libsearpc30 < Formula
   depends_on 'jansson'
   depends_on 'glib'
 
+  conflicts_with "libsearpc"
+
   def install
     ENV.j1
     system "./autogen.sh"

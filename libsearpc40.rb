@@ -1,9 +1,8 @@
 require "formula"
 
-class Libsearpc31 < Formula
+class Libsearpc40 < Formula
   homepage "http://www.seafile.com/"
   url "https://github.com/haiwen/libsearpc/archive/v3.0-latest.tar.gz"
-  version "3.1.11"
   sha1 "cdff106886441205f46a592100ae324314127107"
 
   head "https://github.com/haiwen/libsearpc.git"

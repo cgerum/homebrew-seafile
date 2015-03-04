@@ -1,10 +1,9 @@
 require "formula"
 
-class Ccnet31 < Formula
+class Ccnet40 < Formula
   homepage "http://www.seafile.com/"
-  url "https://github.com/haiwen/ccnet/archive/v3.1.11.tar.gz"
-  version "3.1.11"
-  sha1 "96bede14da1c37648cc576f2cd37a7469e4e3ce4"
+  url "https://github.com/haiwen/ccnet/archive/v4.0.7.tar.gz"
+  sha1 "7c21e865f9b542d1864a930af64a27ac7f49a529"
 
   head "https://github.com/haiwen/ccnet.git"
 
@@ -20,8 +19,6 @@ class Ccnet31 < Formula
     sha1 "e6c540344dfa4d4650cf3e370f2421d897319ab6"
   end
 
-  option "with-brewed-sqlite", "Build with Homebrew sqlite3"
-
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "pkg-config" => :build
@@ -31,8 +28,8 @@ class Ccnet31 < Formula
   depends_on "jansson"
   depends_on "libevent"
   depends_on "openssl"
-  depends_on "sqlite" if build.with? "brewed-sqlite"
-  depends_on "libsearpc31"
+  depends_on "sqlite"
+  depends_on "libsearpc40"
 
   conflicts_with "ccnet"
 

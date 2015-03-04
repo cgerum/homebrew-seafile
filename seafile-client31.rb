@@ -24,6 +24,8 @@ class SeafileClient31 < Formula
   depends_on "ccnet31"
   depends_on "seafile31"
 
+  conflicts_with "seafile-client"
+
   def install
 
     cmake_args = std_cmake_args

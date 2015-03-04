@@ -1,10 +1,9 @@
 require "formula"
 
-class Seafile31 < Formula
+class Seafile40 < Formula
   homepage "http://www.seafile.com/"
-  url "https://github.com/haiwen/seafile/archive/v3.1.11.tar.gz"
-  sha1 "6a7b8e3344aa32343e7c5c1a27718c369304b22e"
-  version "3.1.11"
+  url "https://github.com/haiwen/seafile/archive/v4.0.7.tar.gz"
+  sha1 "a1253304d46dd85b9fb5f45a75eaf2623aafc59f"
 
   head "https://github.com/haiwen/seafile.git"
 
@@ -26,9 +25,7 @@ class Seafile31 < Formula
     sha1 "da429338d1726b95e26b70f7a9ce1bfa3a7392ae"
   end
 
-  depends_on MinimumMacOSRequirement => :lion
-
-  option "with-brewed-sqlite", "Build with Homebrew sqlite3"
+  depends_on MinimumMacOSRequirement => :snow_leopard
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
@@ -39,16 +36,11 @@ class Seafile31 < Formula
   depends_on "jansson"
   depends_on "libevent"
   depends_on "openssl"
-  depends_on "sqlite" if build.with? "brewed-sqlite"
+  depends_on "sqlite"
+  depends_on "curl"
 
-  if MacOS.version >= :mountain_lion
-    depends_on "curl" => "openssl"
-  else
-    depends_on "curl"
-  end
-
-  depends_on "libsearpc31"
-  depends_on "ccnet31"
+  depends_on "libsearpc40"
+  depends_on "ccnet40"
 
   conflicts_with "seafile"
 
