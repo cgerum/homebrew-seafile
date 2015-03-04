@@ -9,19 +9,19 @@ Homebrew-seafile
 > Make sure you don't have macports installed, which is conflicting with homebrew
 
 ### Release 4.1 (Current Release)
-##### current release
+##### this release features reliable retina support and proxy support
 
 1. ``brew tap Chilledheart/seafile``
 1. ``brew install seafile-client``
 
 ### Release 4.0
-##### previous stable release
+##### previous stable release, supports OS X 10.7 and later
 
 1. ``brew tap Chilledheart/seafile``
 1. ``brew install seafile-client40``
 
 ### Release 3.1
-##### supports OS X 10.7 and later
+##### this version supports OS X 10.7 and later
 
 1. ``brew tap Chilledheart/seafile``
 1. ``brew install seafile-client31``
