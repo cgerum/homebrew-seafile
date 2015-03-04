@@ -2,8 +2,8 @@ require "formula"
 
 class SeafileClient < Formula
   homepage "http://www.seafile.com/"
-  url "https://github.com/haiwen/seafile-client/archive/v4.0.7.tar.gz"
-  sha1 "60805439ca157345547ceb27a397447e03a825a9"
+  url "https://github.com/haiwen/seafile-client/archive/v4.1.1.tar.gz"
+  sha1 "981484d9674fde4925d570a16257c7864df1bca1"
 
   head "https://github.com/haiwen/seafile-client.git"
 
