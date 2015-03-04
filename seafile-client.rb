@@ -14,7 +14,7 @@ class SeafileClient < Formula
   depends_on "cmake" => :build
   depends_on "glib"
   depends_on "jansson"
-  depends_on "qt4"
+  depends_on "qt5"
   depends_on "openssl"
   depends_on "sqlite"
   depends_on "libsearpc"
