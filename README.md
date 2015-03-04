@@ -3,6 +3,11 @@ Homebrew-seafile
 
 ## How to use
 
+1. Install homebrew via [brew.sh](http://brew.sh/)
+1. Tap this recipe repository as below
+
+> Make sure you don't have macports installed, which is conflicting with homebrew
+
 ### Release 4.1 (Current Release)
 ##### current release
 
