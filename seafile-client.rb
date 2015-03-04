@@ -23,7 +23,7 @@ class SeafileClient < Formula
   depends_on "seafile"
 
   def install
-
+    ENV.cxx11
     cmake_args = std_cmake_args
     if build.with? "app"
       cmake_args << "-G" << "Xcode" << "-DCMAKE_BUILD_TYPE=Release"
