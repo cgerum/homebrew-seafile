@@ -4,6 +4,7 @@ class SeafileClient40 < Formula
   homepage "http://www.seafile.com/"
   url "https://github.com/haiwen/seafile-client/archive/v4.0.7.tar.gz"
   sha1 "60805439ca157345547ceb27a397447e03a825a9"
+  revision 1
 
   head "https://github.com/haiwen/seafile-client.git"
 
@@ -27,11 +28,12 @@ class SeafileClient40 < Formula
 
     cmake_args = std_cmake_args
     if build.with? "app"
-      cmake_args << "-G" << "Xcode"
+      cmake_args << "-G" << "Xcode" << "-DCMAKE_BUILD_TYPE=Release"
       system "cmake", ".", *cmake_args
       system "xcodebuild", "-target", "ALL_BUILD", "-configuration", "Release"
-      prefix.install "Release/seafile-applet.app"
-      app = prefix/"seafile-applet.app/Contents"
+      File.rename "Release/seafile-applet.app", "Release/Seafile Client.app"
+      prefix.install "Release/Seafile Client.app"
+      app = prefix/"Seafile Client.app/Contents"
       mkdir_p app/"Resources"
       (app/"Resources").install_symlink "#{Formula["ccnet"].opt_prefix}/bin/ccnet"
       (app/"Resources").install_symlink "#{Formula["seafile"].opt_prefix}/bin/seaf-daemon"
