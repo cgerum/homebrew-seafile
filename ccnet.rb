@@ -2,8 +2,8 @@ require "formula"
 
 class Ccnet < Formula
   homepage "http://www.seafile.com/"
-  url "https://github.com/haiwen/ccnet/archive/v4.1.1.tar.gz"
-  sha1 "647eff871e627d0606612f952b7c80cb54d54d54"
+  url "https://github.com/haiwen/ccnet/archive/v4.1.2.tar.gz"
+  sha1 "435bbc1810b41a23158d05947412ceb4bbac1e1e"
 
   head "https://github.com/haiwen/ccnet.git"
 

@@ -2,13 +2,12 @@ require "formula"
 
 class SeafileClient < Formula
   homepage "http://www.seafile.com/"
-  url "https://github.com/haiwen/seafile-client/archive/v4.1.1.tar.gz"
-  sha1 "981484d9674fde4925d570a16257c7864df1bca1"
-  revision 1
+  url "https://github.com/haiwen/seafile-client/archive/v4.1.2.tar.gz"
+  sha1 "42d9b27a750b80fdc46f6bb1453dfcfdfb8f79fb"
 
   head "https://github.com/haiwen/seafile-client.git"
 
-  depends_on MinimumMacOSRequirement => :snow_leopard
+  depends_on MinimumMacOSRequirement => :lion
 
   option "without-app", "Build without app bundle"
 
