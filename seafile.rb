@@ -5,7 +5,7 @@ class Seafile < Formula
   url "https://github.com/haiwen/seafile/archive/v4.1.2.tar.gz"
   sha1 "cfff2262913927d6219f2ad84f70906321ca9644"
 
-  head "https://github.com/haiwen/seafile.git"
+  head "https://github.com/haiwen/seafile.git", :branch => "4.1"
 
   #[FIX] fix openssl build
   patch :p1 do

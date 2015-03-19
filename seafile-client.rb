@@ -5,7 +5,7 @@ class SeafileClient < Formula
   url "https://github.com/haiwen/seafile-client/archive/v4.1.2.tar.gz"
   sha1 "42d9b27a750b80fdc46f6bb1453dfcfdfb8f79fb"
 
-  head "https://github.com/haiwen/seafile-client.git"
+  head "https://github.com/haiwen/seafile-client.git", :branch => "4.1"
 
   depends_on MinimumMacOSRequirement => :lion
 
