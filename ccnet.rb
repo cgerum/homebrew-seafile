@@ -1,9 +1,7 @@
-require "formula"
-
 class Ccnet < Formula
   homepage "http://www.seafile.com/"
-  url "https://github.com/haiwen/ccnet/archive/v4.1.2.tar.gz"
-  sha1 "435bbc1810b41a23158d05947412ceb4bbac1e1e"
+  url "https://github.com/haiwen/ccnet/archive/v4.1.3.tar.gz"
+  sha1 "bbf052d1f37e3824c32088654dd8ad49aec8e019"
 
   head "https://github.com/haiwen/ccnet.git"
 
@@ -36,6 +34,7 @@ class Ccnet < Formula
       --prefix=#{prefix}
       --enable-client
       --disable-server
+      --disable-compile-demo
     ]
 
     system "./autogen.sh"

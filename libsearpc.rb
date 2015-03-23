@@ -1,9 +1,8 @@
-require "formula"
-
 class Libsearpc < Formula
   homepage "http://www.seafile.com/"
   url "https://github.com/haiwen/libsearpc/archive/v3.0-latest.tar.gz"
   sha1 "cdff106886441205f46a592100ae324314127107"
+  revision 1
 
   head "https://github.com/haiwen/libsearpc.git"
 
@@ -19,7 +18,7 @@ class Libsearpc < Formula
 
   def install
     system "./autogen.sh"
-    system "./configure", "--prefix=#{prefix}"
+    system "./configure", "--prefix=#{prefix}", "--disable-compile-demo"
     system "make"
     system "make", "install"
   end

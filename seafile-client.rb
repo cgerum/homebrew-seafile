@@ -1,10 +1,7 @@
-require "formula"
-
 class SeafileClient < Formula
   homepage "http://www.seafile.com/"
-  url "https://github.com/haiwen/seafile-client/archive/v4.1.2.tar.gz"
-  sha1 "c464998dad8f01bd79bd8c389cfd305c28680d6e"
-  revision 1
+  url "https://github.com/haiwen/seafile-client/archive/v4.1.3.tar.gz"
+  sha1 "fa7fe716466cdb876242bd9ff19a92f2148dfc72"
 
   head "https://github.com/haiwen/seafile-client.git", :branch => "4.1"
 
