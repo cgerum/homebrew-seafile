@@ -28,6 +28,7 @@ class Ccnet < Formula
   depends_on "openssl"
   depends_on "sqlite"
   depends_on "libsearpc"
+  depends_on "libuuid"
 
   def install
     args = %W[
